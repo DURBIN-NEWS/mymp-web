@@ -10,7 +10,7 @@ import Intro from '@/components/Intro';
 import NewsTicker from '@/components/NewsTicker';
 import SiteFooter from '@/components/SiteFooter';
 import Icon from '@/components/Icon';
-import { siteUrl, SITE_EMAIL, SITE_FACEBOOK } from '@/lib/site';
+import { siteUrl, SITE_EMAIL, SITE_FACEBOOK, FOUNDER } from '@/lib/site';
 
 /**
  * How the site works, in three lines, above the footer (owner, 2026-09-12).
@@ -66,6 +66,7 @@ const ORGANIZATION = {
   logo: `${siteUrl}/icon-512.png`,
   email: SITE_EMAIL,
   sameAs: [SITE_FACEBOOK],
+  founder: FOUNDER,
 };
 
 /** Public site shell. Reads no session, so every page beneath it can be prerendered. */
