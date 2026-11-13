@@ -6,6 +6,7 @@ import { meta, bn, dateBn, statistics, committeeCounts, parties, GENERAL_SEATS, 
 import { districtList } from '@/lib/districts';
 import { Page, PageHead, Card } from '@/components/ui';
 import { getT } from '@/i18n/server';
+import { FOUNDER_URL } from '@/lib/site';
 
 export async function generateMetadata(): Promise<Metadata> {
   const t = await getT();
@@ -186,6 +187,14 @@ export default async function AboutPage() {
               <li>পাঠকের কোনো তথ্য সংগ্রহ করি না: অ্যাকাউন্ট নেই, বিজ্ঞাপন নেই, ট্র্যাকিং নেই।</li>
             </ul>
           )}
+        </Card>
+
+        <Card className="p-6 flex flex-col gap-3">
+          <h2 className="display text-[21px] font-bold">{t('উদ্যোগের পেছনে', 'Behind this site')}</h2>
+          <p className="text-[15.5px] leading-relaxed text-inksoft">
+            {t('প্রতিষ্ঠাতা: ', 'Founded by ')}
+            <a href={FOUNDER_URL} className="text-brand font-semibold hover:underline">{t('মো. সুমন হাওলাদার', 'Md Sumon Howlader')}</a>.
+          </p>
         </Card>
 
         <Card className="p-6 flex flex-col gap-3">
